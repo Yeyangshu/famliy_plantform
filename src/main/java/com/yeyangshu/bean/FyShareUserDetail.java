@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 公摊费用台账用户明细
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class FyShareUserDetail implements Serializable {
 

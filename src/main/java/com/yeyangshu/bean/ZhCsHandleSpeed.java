@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 业主服务_办理进度
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class ZhCsHandleSpeed implements Serializable {
 

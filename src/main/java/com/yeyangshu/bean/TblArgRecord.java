@@ -9,8 +9,8 @@ import java.io.Serializable;
  * 参数档案
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class TblArgRecord implements Serializable {
 

@@ -9,8 +9,8 @@ import java.io.Serializable;
  * 费项设置
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class FyMoneySetting implements Serializable {
 

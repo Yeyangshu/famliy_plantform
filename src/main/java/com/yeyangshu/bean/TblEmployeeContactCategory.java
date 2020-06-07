@@ -9,8 +9,8 @@ import java.io.Serializable;
  * 员工通讯录类别
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class TblEmployeeContactCategory implements Serializable {
 

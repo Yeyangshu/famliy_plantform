@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 系统图标 Mapper 接口
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public interface TblSysDiagramsMapper extends BaseMapper<TblSysDiagrams> {
 

@@ -9,8 +9,8 @@ import java.io.Serializable;
  * 快捷方式图标
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class TblShortcutIcon implements Serializable {
 

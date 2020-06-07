@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 催缴短信提醒日志
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class WyAskMsgRemindLog implements Serializable {
 

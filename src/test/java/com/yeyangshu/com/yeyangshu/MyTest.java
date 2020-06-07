@@ -18,7 +18,7 @@ public class MyTest {
 
         //全局配置
         GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setAuthor("lian")
+        globalConfig.setAuthor("yeyangshu")
                 .setOutputDir("D:\\study\\famliy_service_platform\\src\\main\\java")//设置输出路径
                 .setFileOverride(true)//设置文件覆盖
                 .setIdType(IdType.AUTO)//设置主键生成策略

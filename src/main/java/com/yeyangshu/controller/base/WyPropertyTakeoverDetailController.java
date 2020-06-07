@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
  * 物业接管工程明细 前端控制器
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 @Controller
 @RequestMapping("/wyPropertyTakeoverDetail")

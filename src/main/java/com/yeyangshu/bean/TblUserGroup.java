@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 用户分组
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class TblUserGroup implements Serializable {
 

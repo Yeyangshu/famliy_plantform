@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 租赁分租信息 Mapper 接口
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public interface ZhRentShareMapper extends BaseMapper<ZhRentShare> {
 

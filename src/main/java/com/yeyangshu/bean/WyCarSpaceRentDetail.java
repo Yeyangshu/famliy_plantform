@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 车位租赁缴费明细
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class WyCarSpaceRentDetail implements Serializable {
 

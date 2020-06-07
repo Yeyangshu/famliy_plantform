@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 费用临时表1
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class FyMoneyTemporary01 implements Serializable {
 

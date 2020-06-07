@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 租赁合同退款
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class ZhRentContractRefund implements Serializable {
 

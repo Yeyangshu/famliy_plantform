@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
  * 房间信息表 前端控制器
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 @Controller
 @RequestMapping("/fcCell")

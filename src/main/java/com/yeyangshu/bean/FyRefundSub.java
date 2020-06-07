@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 退款单子单
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class FyRefundSub implements Serializable {
 

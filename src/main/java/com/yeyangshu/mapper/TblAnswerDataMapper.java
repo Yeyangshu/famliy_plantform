@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 题目可选答案信息表 Mapper 接口
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public interface TblAnswerDataMapper extends BaseMapper<TblAnswerData> {
 

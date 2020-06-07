@@ -10,8 +10,8 @@ import java.io.Serializable;
  * 楼盘经费支出明细_审批子表
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public class WyEstateOutDetailSub implements Serializable {
 

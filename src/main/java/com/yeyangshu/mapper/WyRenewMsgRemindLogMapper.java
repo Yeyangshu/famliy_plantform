@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * 续费短信提醒日志 Mapper 接口
  * </p>
  *
- * @author lian
- * @since 2020-06-05
+ * @author yeyangshu
+ * @since 2020-06-06
  */
 public interface WyRenewMsgRemindLogMapper extends BaseMapper<WyRenewMsgRemindLog> {
 
