@@ -8,9 +8,12 @@ import com.yeyangshu.returnjson.Permissions;
 import com.yeyangshu.returnjson.ReturnObject;
 import com.yeyangshu.returnjson.UserInfo;
 import com.yeyangshu.service.LoginService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,13 +33,15 @@ public class LoginController {
     @Autowired
     TblUserRecordMapper tblUserRecordMapper;
 
+    Logger log = LoggerFactory.getLogger(getClass());
+
     /**
      * 前端默认请求，可以不做处理，可忽略。
      * @return
      */
     @RequestMapping("/auth/2step-code")
     public boolean test() {
-        System.out.println("/auth/2step-code");
+        log.info("/auth/2step-code，不作处理");
         return true;
     }
 
@@ -48,7 +53,9 @@ public class LoginController {
      * @return String
      */
     @RequestMapping("/auth/login")
-    public String login(@RequestParam("username") String username, @RequestParam("password") String password, HttpSession session) {
+    public String login(HttpServletRequest request, @RequestParam("username") String username, @RequestParam("password") String password, HttpSession session) {
+        log.info("request url is" + request.getRequestURL());
+        log.info("login name is" + username);
         TblUserRecord tblUserRecord = loginService.login(username, password);
         tblUserRecord.setToken(tblUserRecord.getUserName());
         // 将用户数据写入到session
@@ -56,7 +63,6 @@ public class LoginController {
         ReturnObject returnObject = new ReturnObject(tblUserRecord);
         System.out.println(returnObject);
         return JSONObject.toJSONString(returnObject);
-//        return JSONObject.parseObject(JSONObject.toJSONString(returnObject));
     }
 
     /**
@@ -68,6 +74,7 @@ public class LoginController {
     public String getInfo(HttpSession session) {
         TblUserRecord tblUserRecord = (TblUserRecord) session.getAttribute("userRecord");
         // 获取模块信息
+        log.info("start get privileges");
         String[] rolePrivileges = tblUserRecord.getTblRole().getRolePrivileges().split("-");
         Permissions permissions  = new Permissions();
         List<Permission> permissionList = new ArrayList<>();
@@ -76,15 +83,13 @@ public class LoginController {
         }
         permissions.setPermissions(permissionList);
         UserInfo userInfo = new UserInfo(tblUserRecord.getUserName(), permissions);
-        System.out.println(userInfo);
         ReturnObject returnObject = new ReturnObject(userInfo);
         return JSONObject.toJSONString(returnObject);
-//        return JSONObject.parseObject(JSONObject.toJSONString(returnObject));
     }
 
     @RequestMapping("/auth/logout")
     public JSONObject loginOut(HttpSession session){
-        System.out.println("退出登录");
+        log.info("sign out");
         // 退出设置session无效
         session.invalidate();
         return JSONObject.parseObject(JSONObject.toJSONString(new ReturnObject(null)));
