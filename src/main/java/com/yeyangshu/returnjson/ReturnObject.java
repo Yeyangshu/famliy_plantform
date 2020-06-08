@@ -47,6 +47,11 @@ public class ReturnObject {
     public ReturnObject() {
     }
 
+    public ReturnObject(String message, Object result) {
+        this.message = message;
+        this.result = result;
+    }
+
     public ReturnObject(String code, String message, Object result) {
         this.code = code;
         this.message = message;

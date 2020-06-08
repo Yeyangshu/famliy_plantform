@@ -52,7 +52,11 @@ public class EstateController {
      */
     @RequestMapping("/estate/insertEstate")
     public String insertEstate(FcEstate fcEstate) {
-        Integer integer = estateService.insertEstate(fcEstate);
-        return JSONObject.toJSONString(new ReturnObject("插入房产成功"));
+        Integer result = estateService.insertEstate(fcEstate);
+        if (result == 0) {
+            return JSONObject.toJSONString(new ReturnObject("0", "房产编码已经存在"));
+        } else {
+            return JSONObject.toJSONString(new ReturnObject("1", "插入房产成功"));
+        }
     }
 }

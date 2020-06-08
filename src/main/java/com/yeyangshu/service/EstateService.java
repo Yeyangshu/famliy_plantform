@@ -10,6 +10,7 @@
  */
 package com.yeyangshu.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yeyangshu.bean.FcEstate;
 import com.yeyangshu.bean.TblCompany;
 import com.yeyangshu.mapper.FcEstateMapper;
@@ -43,9 +44,21 @@ public class EstateService {
 
     /**
      * 插入房地产信息
+     * 在插入数据之前，对当前信息做判断，判断住宅编码是否存在，如果踩在不允许插入
+     * 如果不存在才允许插入
      */
     public Integer insertEstate(FcEstate fcEstate) {
-        int result = fcEstateMapper.insert(fcEstate);
-        return result;
+        // 定义查询包装类
+        QueryWrapper<FcEstate> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("estate_code", fcEstate.getEstateCode());
+        FcEstate findResult = fcEstateMapper.selectOne(queryWrapper);
+        // 定义返回的结果
+        int result = 0;
+        if (findResult != null) {
+            return result;
+        } else {
+            result = fcEstateMapper.insert(fcEstate);
+            return result;
+        }
     }
 }
