@@ -83,4 +83,17 @@ public class EstateController {
         log.info("end insert building, return fcBuilding list");
         return JSONObject.toJSONString(new ReturnObject(fcBuildingList));
     }
+
+    @RequestMapping("/estate/updateBuilding")
+    public String updateBuilding(FcBuilding fcBuilding) {
+        log.info("start update building");
+        Integer result = estateService.updateBuilding(fcBuilding);
+        if (result == 1) {
+            log.info("estate update success");
+            return JSONObject.toJSONString(new ReturnObject("更新楼宇成功"));
+        } else {
+            log.info("estate update fail");
+            return JSONObject.toJSONString(new ReturnObject("1", "更新楼宇失败"));
+        }
+    }
 }

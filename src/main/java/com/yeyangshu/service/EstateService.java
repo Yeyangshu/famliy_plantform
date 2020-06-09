@@ -88,4 +88,14 @@ public class EstateService {
         }
         return fcBuildingList;
     }
+
+    /**
+     * 楼宇更新
+     * @param fcBuilding
+     * @return result
+     */
+    public Integer updateBuilding(FcBuilding fcBuilding) {
+        int result = fcBuildingMapper.updateById(fcBuilding);
+        return result;
+    }
 }
